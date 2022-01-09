@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container header ul li {
+    list-style: none;
+    font-weight: 800;
+    border-bottom: 2px solid transparent;
+    transition: all .7s ease;
+    padding-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.container header ul li:hover {
+    border-color: black;
+    opacity: .7;
+}
+
+main {
+    border-top: .1px solid black;
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.bank {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.bank label {
+    width: 100%;
+    margin: 10px 0;
+}
+main .bank label select {
+    margin-left: 5px;
+    padding: 5px;
+}
+.bank label .info {
+    margin-top: 5px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+}
+input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.bank label a {
+    text-decoration: none;
+    color : red;
+    font-size: 18px;
+}
+.btn {
+    padding: 5px 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.btn:hover {
+    color : white;
+    background-color: black;
+}
+.card fieldset {
+    border: none;
+}
+.card fieldset:first-child {
+    margin-bottom: 20px;
+}
+.card fieldset legend {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.list1 label {
+    margin-left: 10px;
+    display: inline-block;
+}
+.list1 label input:checked ~ span {
+    color: blue;
+}
+.display {
+    display: none;
+}
+.card fieldset .list2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+.card fieldset .list2 label {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.card fieldset .list2 label select {
+    margin-left: 5px;
+    padding: 5px;
+}
+.card fieldset .list2 label .info {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+.card fieldset .list2 label a {
+    text-decoration: none;
+    color : red;
+    font-size: 18px;
+}
+/* Vidientu */
+
+.pay fieldset {
+    border:none;
+    display: flex;
+    justify-content: space-around;
+}
+.pay fieldset a {
+    max-width: 75px;
+    margin: 5px;
+}
+img {
+    max-width: 100%;
+}
+

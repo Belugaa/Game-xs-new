@@ -4,23 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nạp tiền</title>
-    <link href="gdnaptien.css" rel="stylesheet">
-    
+    <title>Nap tien</title>
+    <link rel="stylesheet" href="Naptien.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Nạp Tiền</h1>
-
-        <ul id="nav">
-               <li><a href="">Ngân hàng</a></li>
-               <li><a href="">Thẻ cào</a></li>
-               <li><a href="">Ví điện tử</a></li>
-        </ul>
-        <p>Ngã ở đâu gấp đôi ở đấy :")), Tất tay vận may sẽ đến 🤣🤣🤣</p>
-
-        <img src="https://th.bing.com/th/id/OIP.lQ5nVxTn2lsc3pQD9Hr0AgHaD4?pid=ImgDet&rs=1" alt="">
-
+        <header>
+            <ul>
+                <li id = "a">Ngân hàng <i class="fas fa-university"></i></li>
+                <li id = "b">Thẻ cào <i class="fas fa-credit-card"></i></li>
+                <li id = "c">Ví điện tử <i class="fas fa-wallet"></i></li>
+            </ul>
+        </header>
+        <main>
+            <form id="nganhang" action="#" class="display bank">
+                <label>Chọn ngân hàng
+                    <select name="nameBank">
+                        <option value="Viettinbank">Viettinbank</option>
+                        <option value="Viettinbank">Viettinbank</option>
+                        <option value="Viettinbank">Viettinbank</option>
+                        <option value="Viettinbank">Viettinbank</option>
+                    </select>
+                </label>
+                <label >Tên chủ thẻ <input class="info" type="text" name="ten chu the" required /></label>
+                <label>Số tài khoản<input class="info" type="number" name="so tai khoan" required /></label>
+                <label>Số tiền<input class="info" type="number" name="so tien" required></label>
+                <label><input type="checkbox" name="dieukhoan">Tôi đồng ý với các <a href="#">điều khoản và điều kiện</a></label>
+                <button class="btn">Xác nhận</button>
+            </form>
+            <form id="thecao" action="#" class="display card">
+                <fieldset>
+                    <legend>1. Chọn loại thẻ cào</legend>
+                    <div class="list1">
+                        <label><input type="radio" name="loaithecao" value="Viettel"><span> Viettel</span></label>
+                        <label><input type="radio" name="loaithecao" value="Mobifone"><span> Mobifone</span></label>
+                        <label><input type="radio" name="loaithecao" value="Vinaphone"><span>  Vinaphone</span></label>
+                        <label><input type="radio" name="loaithecao" value="vietnammobile"><span> Vietnammobile</span> </label>
+                        <label><input type="radio" name="loaithecao" value="Zing"><span> Zing</span> </label>
+                        <label><input type="radio" name="loaithecao" value="Garena"><span> Garena</span></label>
+                        <label><input type="radio" name="loaithecao" value="Vcoin"><span> Vcoin</span> </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="list2">
+                        <legend>2. Nhập thông tin thẻ cào</legend>
+                        <label>Chọn mệnh giá 
+                            <select name="menhgia">
+                                <option value="10.000">10.000</option>
+                                <option value="20.000">20.000</option>
+                                <option value="50.000">50.000</option>
+                                <option value="100.000">100.000</option>
+                                <option value="200.000">200.000</option>
+                                <option value="500.000">500.000</option>
+                            </select>
+                        </label>
+                        <label>Mã thẻ <input class="info" type="text" name="mathe"></label>
+                        <label>Số seri <input class="info" type="text" name="seri"></label>
+                        <label><input type="checkbox" name="dieukhoan">Tôi đồng ý với các <a href="#">điều khoản và điều kiện</a></label>
+                        <button class="btn">Nạp thẻ</button>
+                    </div>
+                </fieldset>
+            </form>
+            <form id="vidientu" action="#" class=" pay">
+                <fieldset>
+                    <a href="#"><img src="./images/momo.png" alt="momo"></a>
+                    <a href="#"><img src="./images/zalopay.png" alt="zalopay"></a>
+                    <a href="#"><img src="./images/airpay.png" alt="airpay"></a>
+                </fieldset>
+            </form>
+            
+        </main>
     </div>
+    <script>
+        $("#a").click(function () {
+            $("#nganhang").removeClass("display");
+            $("#thecao").addClass("display");
+            $("#vidientu").addClass("display");
+        })
+        $("#b").click(function () {
+            $("#nganhang").addClass("display");
+            $("#thecao").removeClass("display");
+            $("#vidientu").addClass("display");
+        })
+        $("#c").click(function () {
+            $("#nganhang").addClass("display");
+            $("#thecao").addClass("display");
+            $("#vidientu").removeClass("display");
+        })
+    </script>    
 </body>
+
 </html>
